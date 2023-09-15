@@ -34,7 +34,7 @@ class Program
         
         string lastDigit;
 
-        if (value > 10)
+        if (value >= 10)
         {
             lastDigit = percentage[1].ToString();
         }
@@ -46,31 +46,34 @@ class Program
 
 
         int valueOfLastDigit = int.Parse(lastDigit);
+        string sign;
 
         if (valueOfLastDigit >= 3 && value >= 90)
         {
-            Console.WriteLine(letter);
+            sign = "";
         }
         else if (valueOfLastDigit < 3 && value >= 90)
         {
-            Console.WriteLine($"{letter}-");
+            sign = "-";
         }
         else if (valueOfLastDigit >= 7 && value < 90 && value >= 60)
         {
-            Console.WriteLine($"{letter}+");
+            sign = "+";
         }
         else if (valueOfLastDigit < 7 && valueOfLastDigit >= 3 && value < 90 && value >= 60)
         {
-            Console.WriteLine(letter);
+            sign = "";
         } 
         else if (valueOfLastDigit < 3 && value < 90 && value >= 60)
         {
-            Console.WriteLine($"{letter}-");
+            sign = "-";
         }
         else
         {
-            Console.WriteLine(letter);
+            sign = "";
         } 
+
+        Console.WriteLine($"Your letter grade is: {letter}{sign}");
 
         if (value >= 70 )
         {
