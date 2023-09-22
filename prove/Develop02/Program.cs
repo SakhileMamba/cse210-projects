@@ -19,6 +19,7 @@ class Program
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
+            Console.WriteLine("6. Clear");
             Console.Write("What is your selection?: ");
             selection = Console.ReadLine();
             Console.WriteLine();
@@ -36,26 +37,28 @@ class Program
                     journal.AddEntry(entry);
                     Console.WriteLine();
                     break;
+
                 case "2":
 
                     //Below I have added a conditional statement to check if the are entries in the journal.
                     //If the are entries in the journal, then the program displays them.
                     //If the aren't, then the user is informed and a suggestion is made to write a new journal entry. 
 
-                    if (journal._entries.Count < 1) 
+                    if (journal._entries.Count < 1)
                     {
-                        Console.WriteLine("There are no entries in the journal yet. Try loading them from a file or writing a new entry!");
+                        Console.WriteLine("There are no entries in the journal. Try loading them from a file or writing a new entry!");
                         Console.WriteLine();
                     }
                     else
-                    { 
+                    {
                         journal.DisplayAll();
                     }
 
                     break;
+
                 case "3":
                     Console.Write("What is the text filename? ");
-                    
+
                     string loadFilename = Console.ReadLine();
 
                     //Below I have added a conditional statement to check if a file exists before attempting to load entries from the file.
@@ -74,8 +77,9 @@ class Program
                         Console.WriteLine("That file does not exist. Try a different filename!");
                         Console.WriteLine();
                     }
-                    
+
                     break;
+
                 case "4":
 
                     //Below I have added a conditional statement to check if the journal entries aren't empty before attempting to save them into a file.
@@ -83,20 +87,62 @@ class Program
                     //If the journal entries are not empty, these entries are saved to the file.
                     if (journal._entries.Count < 1)
                     {
-                        Console.WriteLine("There are no journal entries to save yet. Try writing a new entry!");
+                        Console.WriteLine("There are no journal entries to save to a file. Try writing a new entry!");
+                        Console.WriteLine();
+                    }
+                    else
+                    {   
+                        //Below I have added the ability to check if a file already exists and give the user an option to overwrite the file if it does exist or save the current list of entries in the journal to a different file.
+                        bool loopSave = true;
+                        while (loopSave)
+                        {
+                            Console.Write("What is the text filename? ");
+                            string saveFilename = Console.ReadLine();
+
+                            if (File.Exists(saveFilename))
+                            {
+                                Console.Write("This file already exists. If you continue it will be overwritten. Enter 'y' to overwrite the file or any other letter to choose a different file. ");
+                                string overwrite = Console.ReadLine();
+
+                                switch (overwrite)
+                                {
+                                    case "y":
+                                        journal.SaveToFile(saveFilename);
+                                        loopSave = false;
+                                        Console.WriteLine();
+                                        break;
+
+                                }
+                            }
+                            else
+                            {
+                                journal.SaveToFile(saveFilename);
+                                loopSave = false;
+                                Console.WriteLine();
+                            }
+
+                        }
+
+                    }
+                    break;
+
+                case "5":
+                    loop = false;
+                    break;
+                
+                case "6":
+                    //Added the ability to clear entries in the journal without restarting the program to give the user more control.
+                    if(journal._entries.Count == 0)
+                    {
+                        Console.WriteLine("There are no current entries to clear in the journal.");
                         Console.WriteLine();
                     }
                     else
                     {
-                        Console.Write("What is the text filename? ");
-                        string saveFilename = Console.ReadLine();
-                        journal.SaveToFile(saveFilename);
+                        journal._entries.Clear();
+                        Console.WriteLine("Journal entries have been cleared. Write a new entry or load entries from a file.");
                         Console.WriteLine();
                     }
-                    
-                    break;
-                case "5":
-                    loop = false;
                     break;
 
                 default:
