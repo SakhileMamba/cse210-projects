@@ -40,9 +40,9 @@ class Program
 
                 case "2":
 
-                    //Below I have added a conditional statement to check if the are entries in the journal.
-                    //If the are entries in the journal, then the program displays them.
-                    //If the aren't, then the user is informed and a suggestion is made to write a new journal entry. 
+                    //Below I have added a conditional statement to check if there are entries in the journal.
+                    //If there are entries in the journal, then the program displays them.
+                    //If there aren't, the user is informed, and a suggestion is made to write a new journal entry. 
 
                     if (journal._entries.Count < 1)
                     {
@@ -61,9 +61,9 @@ class Program
 
                     string loadFilename = Console.ReadLine();
 
-                    //Below I have added a conditional statement to check if a file exists before attempting to load entries from the file.
-                    //If the file exists then entries saved on the file are loaded into the journal and are displayed.
-                    //If the file does not exist then the user is notified instead of the program throwing an error.
+                    //Below I have added a conditional statement to check if a file exists before attempting to load entries from the file into the journal.
+                    //If the file exists, then entries saved on the file are loaded into the journal and displayed.
+                    //If the file does not exist, then the user is notified instead of the program throwing an error.
 
                     if (File.Exists(loadFilename))
                     {
@@ -82,9 +82,9 @@ class Program
 
                 case "4":
 
-                    //Below I have added a conditional statement to check if the journal entries aren't empty before attempting to save them into a file.
-                    //If the journal entries are empty, then the user is notified and nothing is saved onto the file. A suggestion is made to the user to write a new entry.
-                    //If the journal entries are not empty, these entries are saved to the file.
+                    //Below I have added a conditional statement to check if the journal entries list isn't empty before attempting to save the entries into a file.
+                    //If the list is empty, the user is notified and nothing is written into the file. A suggestion is made to the user to write a new entry.
+                    //If the list is not empty, the entries are saved to the file.
                     if (journal._entries.Count < 1)
                     {
                         Console.WriteLine("There are no journal entries to save to a file. Try writing a new entry!");
@@ -92,7 +92,7 @@ class Program
                     }
                     else
                     {   
-                        //Below I have added the ability to check if a file already exists and give the user an option to overwrite the file if it does exist or save the current list of entries in the journal to a different file.
+                        //Below I have added the ability to check if a file already exists in the current directory then and give the user an option to overwrite the file if it does exist or save the current list of entries in the journal to a different file.
                         bool loopSave = true;
                         while (loopSave)
                         {
@@ -131,7 +131,7 @@ class Program
                     break;
                 
                 case "6":
-                    //Added the ability to clear entries in the journal without restarting the program to give the user more control.
+                    //Created a new menu option to add the functionality to clear entries in the journal, without restarting the program to give the user more control.
                     if(journal._entries.Count == 0)
                     {
                         Console.WriteLine("There are no current entries to clear in the journal.");
