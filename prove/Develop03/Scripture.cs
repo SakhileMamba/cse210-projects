@@ -73,8 +73,8 @@ public class Scripture
     }
 
     /*
-    I have added this function to make all the words in the scripture show all the text again instead
-    which help incase the users want to memorize a scripture again.
+    I have added the method ShowAll() below to make all the words in the scripture show text instead of
+    dashes after they have been hidden, which helps in case the users want to memorize a scripture again.
     */ 
     public void ShowAll()
     {
