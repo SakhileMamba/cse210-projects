@@ -1,6 +1,11 @@
 using System;
 using System.Runtime.Intrinsics.X86;
 
+//I have added a Question class to hold more data about the questions in the reflection activity, i.e whether each questions has been shown or not. The class also has behaviour responsible for modifying its state.
+
+//I have added functionality to update the duration of time taken to complete a reflection activity session in the case a user runs out of questions before the time he had allocated for the session. Please refer to ReflectionActivity.cs file.
+
+
 class Program
 {
     static void Main(string[] args)
