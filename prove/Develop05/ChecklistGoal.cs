@@ -16,7 +16,7 @@ public class ChecklistGoal : Goal
         _target = target;
         _bonus = bonus;
         _amountCompleted = amountCompleted;
-    }//constructor for checklist goals loaded from a  file.
+    }//constructor for checklist goals loaded from a file.
 
     public override string RecordEvent()
     {

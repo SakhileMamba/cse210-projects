@@ -379,7 +379,7 @@ public class GoalManager
                     index++;
                 }
             }
-            Console.Clear(); //move to begin if user will manually input text filename
+            Console.Clear(); 
             Console.WriteLine($"Your goals have been successfully saved to file!");
             Console.WriteLine();
 
