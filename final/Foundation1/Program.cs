@@ -89,7 +89,7 @@ class Program
             Console.WriteLine($"Number of Comments: {videos[i].NumberOfComments()}");
 
             Console.WriteLine();
-            Console.WriteLine("Comments:");
+            Console.WriteLine("Video Comments:");
 
             foreach (Comment comment in videos[i].comments)
             {
