@@ -18,7 +18,7 @@ public abstract class Activity
 
     public string GetSummary()
     {
-        return $"{_date} {_name} ({_length} min): Distance {GetDistance()} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km";
+        return $"{_date} {_name} ({_length} min): Distance {Math.Round(GetDistance(), 2)} km, Speed: {Math.Round(GetSpeed(), 2)} kph, Pace: {Math.Round(GetPace(), 2)} min per km";
     }
 
 
