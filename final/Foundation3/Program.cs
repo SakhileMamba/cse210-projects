@@ -18,12 +18,15 @@ class Program
 
         Console.WriteLine("LECTURE EVENT MARKETING MESSAGES:");
         Console.WriteLine();
+        Console.WriteLine("---------Standard Details---------");
         Console.WriteLine(lecture.GenerateStandardMessage());
         Console.WriteLine();
         Console.WriteLine();
+        Console.WriteLine("-----------Full Details-----------");
         Console.WriteLine(lecture.GenerateFullDetailsMessage());
         Console.WriteLine();
         Console.WriteLine();
+        Console.WriteLine("---------Short Description---------");
         Console.WriteLine(lecture.GenerateShortDescription());
         Console.WriteLine();
 
@@ -32,12 +35,15 @@ class Program
         Console.WriteLine();
         Console.WriteLine("RECEPTION EVENT MARKETING MESSAGES:");
         Console.WriteLine();
+        Console.WriteLine("---------Standard Details---------");
         Console.WriteLine(reception.GenerateStandardMessage());
         Console.WriteLine();
         Console.WriteLine();
+        Console.WriteLine("-----------Full Details-----------");
         Console.WriteLine(reception.GenerateFullDetailsMessage());
         Console.WriteLine();
         Console.WriteLine();
+        Console.WriteLine("---------Short Description---------");
         Console.WriteLine(reception.GenerateShortDescription());
         Console.WriteLine();
 
@@ -46,12 +52,15 @@ class Program
         Console.WriteLine();
         Console.WriteLine("OUTDOOR EVENT MARKETING MESSAGES:");
         Console.WriteLine();
+        Console.WriteLine("---------Standard Details---------");
         Console.WriteLine(outdoor.GenerateStandardMessage());
         Console.WriteLine();
         Console.WriteLine();
+        Console.WriteLine("-----------Full Details-----------");
         Console.WriteLine(outdoor.GenerateFullDetailsMessage());
         Console.WriteLine();
         Console.WriteLine();
+        Console.WriteLine("---------Short Description---------");
         Console.WriteLine(outdoor.GenerateShortDescription());
     }
 }
