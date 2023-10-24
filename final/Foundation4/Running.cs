@@ -1,4 +1,4 @@
-public class Running :Activity
+public class Running : Activity
 {
     private double _distance;
 

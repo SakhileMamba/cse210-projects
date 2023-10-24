@@ -1,4 +1,4 @@
-public class Swimming :Activity
+public class Swimming : Activity
 {
     private int _laps; //50 meters per lap
 

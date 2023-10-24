@@ -10,11 +10,11 @@ class Program
 
         Address outdoorAddress = new Address(streetAddress: "Malandelas", city: "Malkerns", stateOrProvince: "Manzini", country: "Eswatini");
 
-        Lecture lecture = new Lecture(title: "Thermodynamics", description:"Science of the relationship between heat, work, temperature, and energy", date: "5 Jan 2024", time: "0800hrs", address: lectureAddress, speaker: "Justin Khan", capacity: 100);
+        Lecture lecture = new Lecture(title: "Thermodynamics", description: "Science of the relationship between heat, work, temperature, and energy", date: "5 Jan 2024", time: "0800hrs", address: lectureAddress, speaker: "Justin Khan", capacity: 100);
 
-        Reception reception = new Reception(title: "Save The Children", description:"Fundraising dinner to pay university fees for economically disadvantaged students", date: "20 Dec 2023", time: "1800hrs", address: receptionAddress, rsvpEmail: "rsvp@savethechildren.org");
+        Reception reception = new Reception(title: "Save The Children", description: "Fundraising dinner to pay university fees for economically disadvantaged students", date: "20 Dec 2023", time: "1800hrs", address: receptionAddress, rsvpEmail: "rsvp@savethechildren.org");
 
-        Outdoor outdoor = new Outdoor(title: "Bushfire Festival", description:"Renowned festival bringing music lovers from all parts of the world together for 3 days of dancing and vibing", date: "12 May 2024", time: "1300hrs", address: outdoorAddress,weather: "Sunny and clear skies");
+        Outdoor outdoor = new Outdoor(title: "Bushfire Festival", description: "Renowned festival bringing music lovers from all parts of the world together for 3 days of dancing and vibing", date: "12 May 2024", time: "1300hrs", address: outdoorAddress, weather: "Sunny and clear skies");
 
         Console.WriteLine("LECTURE EVENT MARKETING MESSAGES:");
         Console.WriteLine();
@@ -48,7 +48,7 @@ class Program
         Console.WriteLine();
 
         Console.WriteLine("=================================================================================================================");
-        
+
         Console.WriteLine();
         Console.WriteLine("OUTDOOR EVENT MARKETING MESSAGES:");
         Console.WriteLine();

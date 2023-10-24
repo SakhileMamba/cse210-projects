@@ -13,7 +13,7 @@ public class Order
     {
         double orderTotal = 0;
 
-        foreach(Product product in _products)
+        foreach (Product product in _products)
         {
             orderTotal += product.GetPrice();
         }
@@ -27,13 +27,13 @@ public class Order
         string packingLabel = "";
         packingLabel += "PACKING LABEL:\n\n";
 
-        for(int i=0; i<_products.Count; i++)
+        for (int i = 0; i < _products.Count; i++)
         {
             packingLabel += $"Name: {_products[i].GetName()}\nID: {_products[i].GetProductId()}";
 
-            if(i < _products.Count - 1)
+            if (i < _products.Count - 1)
             {
-                packingLabel += "\n\n"; 
+                packingLabel += "\n\n";
             }
         }
 

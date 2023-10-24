@@ -1,4 +1,4 @@
-public class Cycling :Activity
+public class Cycling : Activity
 {
     private double _speed;
 

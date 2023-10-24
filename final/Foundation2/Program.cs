@@ -16,7 +16,7 @@ class Program
 
         Order customer1Order = new Order(customer: customer1, products: customer1Products);
 
-        
+
         Address customer2Address = new Address(streetAddress: "56 Rodeo dr", city: "Beverly Hills", stateOrProvince: "California", country: "USA");
 
         Customer customer2 = new Customer(name: "Sakhile Mamba", address: customer2Address);
@@ -42,7 +42,7 @@ class Program
         Console.WriteLine();
 
         Console.WriteLine("==================================================================");
-        
+
         Console.WriteLine();
         Console.WriteLine("ORDER 2 DETAILS: ");
         Console.WriteLine();

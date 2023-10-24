@@ -12,10 +12,10 @@ public class Address
         _stateOrProvince = stateOrProvince;
         _country = country;
     }
-    
+
     public bool IsInUSA()
     {
-        if(_country == "USA" || _country == "United States of America")
+        if (_country == "USA" || _country == "United States of America")
         {
             return true;
         }
